@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import Slider from 'react-rangeslider'
 import { withTheme } from 'styled-components'
+import 'react-rangeslider/lib/index.css'
 
 import {
   Wrapper,
@@ -34,7 +35,6 @@ class DefaultSlider extends Component {
           orientation='vertical'
           onChange={this.handleChange}
         />
-        <div className='value'>{value}</div>
       </Wrapper>
     )
   }

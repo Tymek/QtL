@@ -11,17 +11,17 @@ const Wrapper = styled.div`
       background: #000;
       max-width: 15px;
       border-radius: 1px;
-      border-radius: 3px;
+      border-radius: ${props => props.theme.borderRadius};
       
       .rangeslider__handle {
         width: 45px;
         height: 20px;
         left: -15px;
-        border-radius: 3px;
+        border-radius: ${props => props.theme.borderRadius};
         background: ${props => props.theme.color.foreground};
       }
       .rangeslider__fill {
-        border-radius: 0 0 3px 3px;
+        border-radius: 0 0 ${props => props.theme.borderRadius} ${props => props.theme.borderRadius};
         background: ${props => props.theme.color.primary};
       }
     }

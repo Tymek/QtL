@@ -5,7 +5,8 @@ const theme = {
     secondary: '#841033',
     accent: '#e3b019',
     foreground: '#EEEDD7',
-  }
+  },
+  borderRadius: '3px',
 }
 
 export default theme
