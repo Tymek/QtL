@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 
 const Wrapper = styled.div`
   outline: none;
@@ -12,6 +12,9 @@ const StyledButton = styled.button`
   height: 60px;
   border-radius: ${props => props.theme.borderRadius};
   cursor: pointer;
+  ${props => props.color ? css`
+    background: ${props => props.color};
+  ` : ``}
 `
 
 export {

@@ -42,12 +42,12 @@ class App extends Component {
           <ConnectionForm />
           <hr />
           <ButtonsWrapper>
-            <Button id="313" />
-            <Button id="299" />
-            <Button id="300" />
-            <Button id="302" />
-            <Button id="308" />
-            <Button id="309" />
+            <Button id="313" color="#FDFDFD" />
+            <Button id="299" color="#9898FF" />
+            <Button id="300" color="#75E3FE" />
+            <Button id="302" color="#48E848" />
+            <Button id="308" color="#FEFC6C" />
+            <Button id="309" color="#FEAC75" />
           </ButtonsWrapper>
           <SliderWrapper>
             <Slider id="17" />

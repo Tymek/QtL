@@ -9,7 +9,7 @@ import {
 
 class DefaultButton extends Component {
   vibrate = () => {
-    window.navigator.vibrate(40);
+    window.navigator.vibrate(50);
   }
 
   handleClick = event => {
@@ -19,7 +19,11 @@ class DefaultButton extends Component {
   render () {
     return (
       <Wrapper>
-        <StyledButton onClick={this.handleClick} onTouchStart={this.vibrate} />
+        <StyledButton
+          onClick={this.handleClick}
+          onTouchStart={this.vibrate}
+          color={this.props.color}
+        />
       </Wrapper>
     )
   }

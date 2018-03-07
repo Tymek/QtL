@@ -18,7 +18,7 @@ class DefaultSlider extends Component {
 
   handleChange = (value) => {
     if (Math.round(value) === Math.round(this.value)) return
-    window.navigator.vibrate(12);
+    window.navigator.vibrate(15);
     this.setState({
       value: value
     })
