@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import Slider from 'react-rangeslider'
 import { withTheme } from 'styled-components'
 import 'react-rangeslider/lib/index.css'
+import { sendCMD } from '../../socket';
 
 import {
   Wrapper,
@@ -21,6 +22,8 @@ class DefaultSlider extends Component {
     this.setState({
       value: value
     })
+
+    sendCMD(`${this.props.id}|${this.state.value}`);
   }
 
   render () {

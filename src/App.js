@@ -42,15 +42,15 @@ class App extends Component {
           <ConnectionForm />
           <hr />
           <ButtonsWrapper>
-            <Button onClick={() => {}} />
-            <Button onClick={() => {}} />
-            <Button onClick={() => {}} />
-            <Button onClick={() => {}} />
-            <Button onClick={() => {}} />
-            <Button onClick={() => {}} />
+            <Button id="313" />
+            <Button id="299" />
+            <Button id="300" />
+            <Button id="302" />
+            <Button id="308" />
+            <Button id="309" />
           </ButtonsWrapper>
           <SliderWrapper>
-            <Slider />
+            <Slider id="17" />
           </SliderWrapper>
         </AppWrapper>
       </ThemeProvider>

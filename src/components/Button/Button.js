@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import { withTheme } from 'styled-components'
+import { sendCMD } from '../../socket';
 
 import {
   StyledButton,
@@ -11,10 +12,14 @@ class DefaultButton extends Component {
     window.navigator.vibrate(40);
   }
 
+  handleClick = event => {
+    sendCMD(`${this.props.id}|255`);
+  }
+
   render () {
     return (
       <Wrapper>
-        <StyledButton onClick={this.props.onClick} onTouchStart={this.vibrate} />
+        <StyledButton onClick={this.handleClick} onTouchStart={this.vibrate} />
       </Wrapper>
     )
   }

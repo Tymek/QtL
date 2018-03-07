@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import styled, { withTheme } from 'styled-components';
+import { connect } from '../../socket';
 
-const StyledForm = styled.div`
+const StyledForm = styled.form`
   width: 100%;
   input {
     padding: 10px;
@@ -24,11 +25,29 @@ const StyledForm = styled.div`
 `
 
 class ConnectionForm extends Component {
+  constructor (props, context) {
+    super(props, context)
+    this.state = {
+      address: '127.0.0.1:9999',
+      connected: false,
+    }
+  }
+
+  handleChange = event => {
+    this.setState({address: event.target.value})
+  }
+
+  handleSubmit = event => {
+    connect(this.state.address);
+    // this.setState({connected: isConnected})
+    event.preventDefault();
+  }
+
   render() {
     return (
-      <StyledForm>
-        <input defaultValue="http://127.0.0.1:9999"/>
-        <button onClick={() => {}}>Connect</button>
+      <StyledForm onSubmit={this.handleSubmit}>
+        <input value={this.state.address} onChange={this.handleChange}/>
+        <button type="submit" value="Submit">{!this.state.connected ? 'Connect' : 'Disconnect'}</button>
       </StyledForm>
     );
   }
